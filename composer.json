@@ -1,0 +1,16 @@
+{
+    "name": "aditya/detik-test",
+    "description": "Detik.com technical test",
+    "autoload": {
+        "psr-4": {
+            "Aditya\\DetikTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aditya Rifqy Fauzan",
+            "email": "adityarifqyfauzan@gmail.com"
+        }
+    ],
+    "require": {}
+}

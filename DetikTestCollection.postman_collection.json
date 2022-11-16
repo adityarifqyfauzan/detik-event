@@ -1,0 +1,819 @@
+{
+	"info": {
+		"_postman_id": "d9ebfcc4-2dc0-4da1-b972-00d6681a3505",
+		"name": "DetikTestCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23004903"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get Event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/event",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"event"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/event",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"event"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:37:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Here is your Event Data\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"JKT48 10th Anniversary \",\n            \"description\": null,\n            \"created_at\": \"2022-11-16 16:30:13\",\n            \"updated_at\": \"2022-11-16 16:30:13\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"BRI LIGA 1 | Persib Bandung vs Persija Jakarta\",\n            \"description\": \"\",\n            \"created_at\": \"2022-11-16 16:37:25\",\n            \"updated_at\": \"2022-11-16 16:37:25\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Event ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/event/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"event",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/event/1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"event",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:38:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Here is your Event Data\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"JKT48 10th Anniversary \",\n        \"description\": null,\n        \"created_at\": \"2022-11-16 16:30:13\",\n        \"updated_at\": \"2022-11-16 16:30:13\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Konser Ramadhan\",\r\n    \"description\" : \"Konser berkah ramadhan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/event",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"event"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/event",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"event"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:39:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"nama tidak boleh kosong!\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Konser Ramadhan\",\r\n    \"description\" : \"Konser berkah ramadhan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/event",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"event"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:50:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event berhasil dibuat\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Get Ticket By Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/ticket?code=DTX0X3UWT3",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"ticket"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "DTX0X3UWT3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Ticket Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:50:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tiket tidak ditemukan\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Tiket Ditemukan",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=DTX0X3UWT3",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "DTX0X3UWT3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 18:51:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tiket ditemukan\",\n    \"data\": {\n        \"ticket_code\": \"DTX0X3UWT3\",\n        \"status\": \"available\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Status Ticket",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"claimed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/ticket?code=DTX0X3UWT3",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"ticket"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "DTX0X3UWT3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=DTX0X3UWT3",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "DTX0X3UWT3"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 19:21:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"status tidak boleh kosong!\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\" : \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 19:22:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"status hanya boleh 'available' dan 'claimed' !\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\" : \"claimed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=1",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 19:22:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tiket tidak ditemukan\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\" : \"claimed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/ticket?code=DTX0X3UWT3",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"ticket"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "DTX0X3UWT3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8008"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 19:23:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Status tiket berhasil diperbarui\",\n    \"data\": {\n        \"ticket_code\": \"DTX0X3UWT3\",\n        \"status\": \"claimed\",\n        \"updated_at\": \"2022-11-16 19:23:19\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
